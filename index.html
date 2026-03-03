@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary Meta Tags -->
+    <title>Fluno™ - Modern Personal Care & Hygiene Essentials</title>
+    <meta name="title" content="Fluno™ - Modern Personal Care & Hygiene Essentials">
+    <meta name="description" content="Experience modern personal care with Fluno — Care in Every Drop. Explore gentle, effective, and skin-friendly hygiene essentials crafted for your daily wellness at myfluno.com.">
+    <meta name="keywords" content="Fluno, personal care, hygiene essentials, skin-friendly, daily wellness, modern hygiene, freshness, confidence, body care">
+    <meta name="author" content="Fluno">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://myfluno.com/">
+    <meta property="og:title" content="Fluno™ - Modern Personal Care & Hygiene Essentials">
+    <meta property="og:description" content="Experience modern personal care with Fluno — where freshness meets confidence. Explore gentle, effective, and skin-friendly hygiene essentials crafted for your daily wellness.">
+    <meta property="og:image" content="https://myfluno.com/images/fluno%20logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://myfluno.com/">
+    <meta property="twitter:title" content="Fluno™ - Modern Personal Care & Hygiene Essentials">
+    <meta property="twitter:description" content="Experience modern personal care with Fluno — where freshness meets confidence. Explore gentle, effective, and skin-friendly hygiene essentials crafted for your daily wellness.">
+    <meta property="twitter:image" content="https://myfluno.com/images/fluno%20logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/fluno%20logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/fluno%20logo.png">
+    <link rel="apple-touch-icon" href="/images/fluno%20logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://myfluno.com/">
+    <link rel="icon" type="image/icon" sizes="32x32" href="favicon.icon">
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Fluno",
+            "url": "https://myfluno.com",
+            "logo": "https://myfluno.com/images/fluno%20logo.png",
+            "description": "Modern personal care and hygiene essentials brand offering gentle, effective, and skin-friendly products for daily wellness.",
+            "sameAs": []
+        }
+    </script>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+<div class="background-animation"></div>
+
+<div class="intro-container">
+    <!-- Logo with animated letters -->
+    <div class="logo" id="logo">
+        <span>f</span>
+        <span>l</span>
+        <span>u</span>
+        <span>n</span>
+        <span>o</span>
+    </div>
+
+    <!-- Tagline -->
+    <div class="brand-description" id="brandDescription">
+        <p>Care In Every Drop</p>
+    </div>
+    <!-- Explore button -->
+    <a href="https://myfluno.wixsite.com/fluno-1" class="explore-btn" id="exploreBtn" target="_blank">Explore More</a>
+</div>
+<!-- Script -->
+<script src="./js/script.js"></script>
+<script>
+    // Optional: Animate letters on load
+    const letters = document.querySelectorAll('.logo span');
+    letters.forEach(letter => {
+        letter.style.animation = 'letterReveal 1s forwards , fadeZoom 5s forwards ease-in-out';
+
+    });
+
+    // Optional: Adaptive logo color based on background brightness
+    function updateLogoColor() {
+        const logo = document.querySelectorAll('.logo span');
+        const bgColor = window.getComputedStyle(document.body).backgroundColor;
+        const rgb = bgColor.match(/\d+/g);
+        const brightness = (parseInt(rgb[0]) * 299 + parseInt(rgb[1]) * 587 + parseInt(rgb[2]) * 114) / 1000;
+
+        logo.forEach(l => {
+            l.style.color = brightness < 128 ? '#fff' : '#BD7EFA';
+        });
+    }
+
+    window.addEventListener('load', updateLogoColor);
+    window.addEventListener('resize', updateLogoColor);
+
+
+</script>
+</body>
+
+</html>
