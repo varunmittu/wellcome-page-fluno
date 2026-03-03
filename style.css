@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.intro-container {
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 14vw;
+    font-weight: 700;
+    color: #BD7EFA;
+    opacity: 1.5;
+    transform: scale(0.8) translateY(30px);
+    transition: all 5s ease;
+}
+.logo  {
+    color: #BD7EFA;
+}
+
+/* Smooth cinematic letter appearance */
+@keyframes fadeZoom {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(40px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1) translateY(-5px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* TAGLINE */
+.brand-description {
+    opacity: 1;
+    transform: translateY(30px);
+    margin-top: 20px;
+
+}
+
+.brand-description p {
+    color: #BD7EFA;
+    font-size: 34px;
+    transform: translateY(20px);
+    transition: all 0.8s ease;
+}
+
+/* BUTTON */
+.explore-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 40px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(135deg, #f5e6d3, #d4af37);
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+/* ANIMATION STATES */
+.show-letter {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeZoom 5s forwards ease-in-out;
+}
+
+.show-tagline {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .logo span { font-size: 12vw; }
+    .brand-description p { font-size: 18px; }
+}
