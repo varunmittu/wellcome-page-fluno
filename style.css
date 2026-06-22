@@ -73,7 +73,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
-    color: #ffffff;
+    color: #BD7EFA;
     background: linear-gradient(135deg, #f5e6d3, #d4af37);
     border-radius: 50px;
     box-shadow: 0 10px 30px rgba(212,175,55,0.4);
@@ -81,6 +81,7 @@ body {
     transform: translateY(30px);
     transition: all 0.8s ease;
 }
+
 
 /* ANIMATION STATES */
 .show-letter {
