@@ -65,38 +65,92 @@ body {
     transition: all 0.8s ease;
 }
 
-/* BUTTON */
 .explore-btn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 14px 40px;
+    padding: 16px 48px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
-    color: #ffffff;
-    background: linear-gradient(135deg, #f5e6d3, #d4af37);
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 50px;
-    box-shadow: 0 10px 30px rgba(212,175,55,0.4);
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
 }
 
-/* ANIMATION STATES */
-.show-letter {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeZoom 5s forwards ease-in-out;
+.explore-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
 }
 
-.show-tagline {
-    opacity: 1;
-    transform: translateY(0);
+.explore-btn:hover::before {
+    left: 100%;
+}
+
+.explore-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(118, 75, 162, 0.5);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.explore-btn:active {
+    transform: translateY(-2px) scale(1.02);
 }
 
 .show-button {
-    opacity: 1;
-    transform: translateY(0);
+    animation: buttonReveal 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes buttonReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        max-width: 280px;
+    }
+
+    .brand-description p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+
+    .explore-btn {
+        padding: 14px 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        max-width: 220px;
+    }
+
+    .brand-description p {
+        font-size: 16px;
+    }
+
+    .explore-btn {
+        padding: 12px 32px;
+        font-size: 15px;
+    }
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
