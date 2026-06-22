@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     const logoLetters = document.querySelectorAll('#logo span');
-    const exploreBtn = document.getElementById('exploreBtn');
+    const explore-btn = document.getElementById('exploreBtn');
 
     // Show explore button after logo + tagline
     setTimeout(() => {
-        exploreBtn.classList.add('show-button');
+        explore-btn.classList.add('show-button');
     }, 3200);
 
     // Hover animation for letters
@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Explore button click
-    exploreBtn.addEventListener('click', () => {
-        exploreBtn.style.transform = 'scale(0.95)';
+    explore-btn.addEventListener('click', () => {
+        explore-btn.style.transform = 'scale(0.95)';
         setTimeout(() => {
-            exploreBtn.style.transform = '';
+            explore-btn.style.transform = '';
             window.open('https://myfluno.wixsite.com/fluno-1', '_blank');
         }, 150);
     });
