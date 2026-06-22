@@ -68,14 +68,14 @@ body {
 /* BUTTON */
 .exploreBtn {
     display: inline-block;
-    margin-top: 30px;
-    padding: 14px 40px;
+    margin-top: 10px;
+    padding: 25px 40px;
     font-size: 18px;
     font-weight: 700;
     text-decoration: none;
     color: #BD7EFA;
     background: linear-gradient(135deg, #f5e6d3, #d4af37);
-    border-radius: 50px;
+    border-radius: 100px;
     box-shadow: 0 10px 30px rgba(212,175,55,0.4);
     opacity: 0;
     transform: translateY(30px);
